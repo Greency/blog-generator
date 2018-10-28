@@ -1,0 +1,10 @@
+#! /usr/bin/env node
+const program = require('commander');
+
+//初始化一个博客目录
+program
+  .command('init [dir]')
+  .description('init blog')
+  .action(require('../lib/init'))
+
+program.parse(process.argv);

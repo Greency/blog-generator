@@ -1,0 +1,19 @@
+{
+  "name": "bmd",
+  "version": "1.0.0",
+  "description": "blog generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "blog",
+    "website",
+    "static"
+  ],
+  "author": "coderCy",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.19.0"
+  }
+}

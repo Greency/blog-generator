@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            font-size: 14px;
+            line-height: 1.5;
+            color: #24292e;
+            background-color: #fff;
+            padding: 0;
+            margin: 0;
+        }
+
+        .container-lg {
+            max-width: 1012px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .header {
+            background-color: #2bb669;
+            font-size: 18px;
+            color: white;
+        }
+
+        .header .container {
+            display: flex;
+            display: -webkit-flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+
+        .header .container .icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .main {
+            display: flex;
+            display: -webkit-flex;
+            justify-content: space-between;
+            margin-top: 24px;
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+        .main .content-box{
+            width: 710px;
+            border: 1px solid red;
+        }
+        .main .tags-box{
+            width: 233px;
+            border-radius: 3px;
+            border: 1px #e1e4e8 solid;
+        }
+        .main .tags-box .label{
+            display: block;
+            position: relative;
+            height: 30px;
+            padding-left: 4px;
+            line-height: 30px;
+            font-weight: 900;
+            border-bottom: 1px solid #e1e4e8;
+        }
+        .main .tags-box .label::before{
+            content: ' ';
+            position: absolute;
+            top: 0;
+            left: -2px;
+            width: 4px;
+            height: 100%;
+            background-color: #2bb669;
+            border-radius: 3px 0 0 3px;
+        }
+        .main .tags-box .tags-content{
+            display: flex;
+            display: -webkit-flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .main .tags-box .tags-content .tag-item{
+            padding: 4px 6px;
+            margin-top: 10px;
+            border-radius: 3px;
+            border: 1px solid #e1e4e8;
+            text-decoration: none;
+            color: black;
+        }
+        .main .tags-box .tags-content .tag-item:hover{
+            opacity: 0.7;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container container-lg">
+            <span>coderCy头脑风暴中心</span>
+            <img class="icon" src="https://avatars3.githubusercontent.com/u/18587803?s=400&u=b1e158a436d6c06c63c99e74c8507d6e38db26ae&v=4"
+                alt="头像">
+        </div>
+    </div>
+    <div class="main container-lg">
+        <div class="content-box">
+            <h2>前言</h2>
+<blockquote>
+<p>目录结构</p>
+</blockquote>
+<pre class="hljs"><code>—bin
+  —bmd //命令行文件
+    —new //新建md文档
+    —build  //将文档编译成html
+    —server  //开启本地服务
+—lib  //业务实现文件
+—template  //博客模板文件
+  —source  //放置md文件
+  —themes  //博客模板样式文件
+  —config.json  //博客配置文件
+</code></pre>
+<h2>起步</h2>
+<blockquote>
+<p>目录搭建，环境安装</p>
+</blockquote>
+<blockquote>
+<p>注意：博主的nodejs版本为v8.12.0</p>
+</blockquote>
+<ul>
+<li>
+<h5>新建一个文件夹，如：blog-md</h5>
+</li>
+<li>
+<h5>在blog-md下安装commander</h5>
+</li>
+</ul>
+<pre class="hljs"><code>npm install commander --save
+</code></pre>
+<ul>
+<li>
+<h5>在blog-md下新建一个bin文件，并在bin下新建一个文本，如：bmd（此文本主要编写命令）</h5>
+</li>
+<li>
+<h5>先在bmd中写下如下信息</h5>
+</li>
+</ul>
+<pre class="hljs"><code>#! /usr/bin/env node
+const program = require('commander');
+</code></pre>
+<ul>
+<li>
+<h5>在blog-md下新建source文件夹</h5>
+</li>
+<li>在source文件夹下新建themes和md两个文件夹</li>
+</ul>
+<blockquote>
+<p>themes是放置生成博客的默认模板；md是放置你写的md文件</p>
+</blockquote>
+<h2>编写模块文件</h2>
+<blockquote>
+<p>编写博客的模板文件</p>
+</blockquote>
+<ul>
+<li>
+<h5>在文件</h5>
+</li>
+</ul>
+<h2>编写init命令</h2>
+<blockquote>
+<p>完成init命令的编写，以及其对应功能的实现</p>
+</blockquote>
+
+        </div>
+        <div class="tags-box">
+            <span class="label">标签</span>
+            <div class="tags-content">
+                <a class="tag-item" href="www.baidu.com">JavaScript</a>
+                <a class="tag-item" href="www.baidu.com">Git</a>
+                <a class="tag-item" href="www.baidu.com">HTML</a>
+                <a class="tag-item" href="www.baidu.com">Git</a>
+                <a class="tag-item" href="www.baidu.com">HTML</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

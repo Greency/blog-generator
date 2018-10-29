@@ -14,6 +14,10 @@
   "author": "coderCy",
   "license": "MIT",
   "dependencies": {
-    "commander": "^2.19.0"
+    "commander": "^2.19.0",
+    "highlight": "^0.2.4",
+    "markdown-it": "^8.4.2",
+    "moment": "^2.22.2",
+    "swig": "^1.4.2"
   }
 }

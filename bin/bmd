@@ -2,9 +2,15 @@
 const program = require('commander');
 
 //初始化一个博客目录
-program
+/*program
   .command('init [dir]')
   .description('init blog')
-  .action(require('../lib/init'))
+  .action(require('../lib/init'))*/
+
+program
+  .command('test')
+  .description('init blog')
+  .action(require('../lib/test'))
+  
 
 program.parse(process.argv);

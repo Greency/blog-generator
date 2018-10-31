@@ -1,3 +1,9 @@
+---
+title: about
+date: 2016-03-12,20:13:58
+layout: about
+---
+
 ## 前言
 > 目录结构
 ```
@@ -35,6 +41,8 @@ const program = require('commander');
 - 在source文件夹下新建themes和md两个文件夹
 
 > themes是放置生成博客的默认模板；md是放置你写的md文件
+
+<!--more-->
 
 ## 编写模块文件
 > 编写博客的模板文件

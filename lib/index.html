@@ -7,17 +7,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="lighheight.css">
     <style>
         * {
             box-sizing: border-box;
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
             font-size: 14px;
-            line-height: 1.5;
-            color: #24292e;
-            background-color: #fff;
+            line-height: 1.42857143;
+            color: #333;
             padding: 0;
             margin: 0;
         }
@@ -59,16 +59,18 @@
             padding-left: 16px;
             padding-right: 16px;
         }
-        .main .content-box{
+
+        .main .content-box {
             width: 710px;
-            border: 1px solid red;
         }
-        .main .tags-box{
+
+        .main .tags-box {
             width: 233px;
             border-radius: 3px;
             border: 1px #e1e4e8 solid;
         }
-        .main .tags-box .label{
+
+        .main .tags-box .label {
             display: block;
             position: relative;
             height: 30px;
@@ -77,7 +79,8 @@
             font-weight: 900;
             border-bottom: 1px solid #e1e4e8;
         }
-        .main .tags-box .label::before{
+
+        .main .tags-box .label::before {
             content: ' ';
             position: absolute;
             top: 0;
@@ -87,7 +90,8 @@
             background-color: #2bb669;
             border-radius: 3px 0 0 3px;
         }
-        .main .tags-box .tags-content{
+
+        .main .tags-box .tags-content {
             display: flex;
             display: -webkit-flex;
             flex-wrap: wrap;
@@ -96,7 +100,8 @@
             padding-left: 10px;
             padding-right: 10px;
         }
-        .main .tags-box .tags-content .tag-item{
+
+        .main .tags-box .tags-content .tag-item {
             padding: 4px 6px;
             margin-top: 10px;
             border-radius: 3px;
@@ -104,7 +109,8 @@
             text-decoration: none;
             color: black;
         }
-        .main .tags-box .tags-content .tag-item:hover{
+
+        .main .tags-box .tags-content .tag-item:hover {
             opacity: 0.7;
         }
     </style>
@@ -121,10 +127,10 @@
     <div class="main container-lg">
         <div class="content-box">
             <h2>前言</h2>
-<blockquote>
-<p>目录结构</p>
-</blockquote>
-<pre class="hljs"><code>—bin
+            <blockquote>
+                <p>目录结构</p>
+            </blockquote>
+            <pre class="markdown hljs"><code>—bin
   —bmd //命令行文件
     —new //新建md文档
     —build  //将文档编译成html
@@ -135,56 +141,43 @@
   —themes  //博客模板样式文件
   —config.json  //博客配置文件
 </code></pre>
-<h2>起步</h2>
-<blockquote>
-<p>目录搭建，环境安装</p>
-</blockquote>
-<blockquote>
-<p>注意：博主的nodejs版本为v8.12.0</p>
-</blockquote>
-<ul>
-<li>
-<h5>新建一个文件夹，如：blog-md</h5>
-</li>
-<li>
-<h5>在blog-md下安装commander</h5>
-</li>
-</ul>
-<pre class="hljs"><code>npm install commander --save
+            <h2>起步</h2>
+            <blockquote>
+                <p>目录搭建，环境安装</p>
+            </blockquote>
+            <blockquote>
+                <p>注意：博主的nodejs版本为v8.12.0</p>
+            </blockquote>
+            <ul>
+                <li>
+                    <h5>新建一个文件夹，如：blog-md</h5>
+                </li>
+                <li>
+                    <h5>在blog-md下安装commander</h5>
+                </li>
+            </ul>
+            <pre class="markdown hljs"><code>npm install commander --save
 </code></pre>
-<ul>
-<li>
-<h5>在blog-md下新建一个bin文件，并在bin下新建一个文本，如：bmd（此文本主要编写命令）</h5>
-</li>
-<li>
-<h5>先在bmd中写下如下信息</h5>
-</li>
-</ul>
-<pre class="hljs"><code>#! /usr/bin/env node
+            <ul>
+                <li>
+                    <h5>在blog-md下新建一个bin文件，并在bin下新建一个文本，如：bmd（此文本主要编写命令）</h5>
+                </li>
+                <li>
+                    <h5>先在bmd中写下如下信息</h5>
+                </li>
+            </ul>
+            <pre class="markdown hljs"><code>#! /usr/bin/env node
 const program = require('commander');
 </code></pre>
-<ul>
-<li>
-<h5>在blog-md下新建source文件夹</h5>
-</li>
-<li>在source文件夹下新建themes和md两个文件夹</li>
-</ul>
-<blockquote>
-<p>themes是放置生成博客的默认模板；md是放置你写的md文件</p>
-</blockquote>
-<h2>编写模块文件</h2>
-<blockquote>
-<p>编写博客的模板文件</p>
-</blockquote>
-<ul>
-<li>
-<h5>在文件</h5>
-</li>
-</ul>
-<h2>编写init命令</h2>
-<blockquote>
-<p>完成init命令的编写，以及其对应功能的实现</p>
-</blockquote>
+            <ul>
+                <li>
+                    <h5>在blog-md下新建source文件夹</h5>
+                </li>
+                <li>在source文件夹下新建themes和md两个文件夹</li>
+            </ul>
+            <blockquote>
+                <p>themes是放置生成博客的默认模板；md是放置你写的md文件</p>
+            </blockquote>
 
         </div>
         <div class="tags-box">

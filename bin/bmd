@@ -3,14 +3,15 @@ const program = require('commander');
 
 //初始化一个博客目录
 /*program
-  .command('init [dir]')
+  .command('-i [dir]')
   .description('init blog')
   .action(require('../lib/init'))*/
 
+//生成静态HTML文章的命令
 program
-  .command('test')
-  .description('init blog')
-  .action(require('../lib/test'))
+  .command('-g [dir]')
+  .description('build html')
+  .action(require('../lib/build'))
   
 
 program.parse(process.argv);

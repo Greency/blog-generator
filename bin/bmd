@@ -7,9 +7,9 @@ const program = require('commander');
   .description('init blog')
   .action(require('../lib/init'))*/
 
-//生成静态HTML文章的命令
+//将[dir]所指的目录中的文件生成静态文章HTML
 program
-  .command('-g [dir]')
+  .command('build [dir]')
   .description('build html')
   .action(require('../lib/build'))
   

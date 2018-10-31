@@ -1,0 +1,17 @@
+#! /usr/bin/env node
+const program = require('commander');
+
+//初始化一个博客目录
+/*program
+  .command('-i [dir]')
+  .description('init blog')
+  .action(require('../lib/init'))*/
+
+//将[dir]所指的目录中的文件生成静态文章HTML
+program
+  .command('build [dir]')
+  .description('build html')
+  .action(require('../lib/build'))
+  
+
+program.parse(process.argv);
